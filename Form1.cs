@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.Json;
 
 namespace Projeto_de_formulário_para_um_bloco_de_notas
 {
@@ -69,12 +71,26 @@ namespace Projeto_de_formulário_para_um_bloco_de_notas
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var Cliente = new Cliente
+            {
+                Nome = NOME_TXT.Text,
+                CPF = CPF_TXT.Text,
+                Telefone = TELEFONE_TXT.Text,
+                Email = EMAIL_TXT.Text,
+                Endereco = ENDEREÇO_TXT.Text,
+                CEP = CEP_TXT.Text,
+                Estado = ESTADO_TXT.Text
+            };  
 
+            try
+            {
+
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -88,6 +104,11 @@ namespace Projeto_de_formulário_para_um_bloco_de_notas
         }
 
         private void CPF_TXT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }
