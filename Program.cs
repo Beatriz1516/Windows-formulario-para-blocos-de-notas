@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Projeto_de_formulário_para_um_bloco_de_notas
+namespace formulario_de_cadastro
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace Projeto_de_formulário_para_um_bloco_de_notas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new CADASTRO());
         }
     }
 }

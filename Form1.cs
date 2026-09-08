@@ -4,24 +4,18 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.Json;
 
-namespace Projeto_de_formulário_para_um_bloco_de_notas
+namespace formulario_de_cadastro
 {
-    public partial class Form1 : Form
+    public partial class CADASTRO : Form
     {
-        public Form1()
+        public CADASTRO()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -29,7 +23,7 @@ namespace Projeto_de_formulário_para_um_bloco_de_notas
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
@@ -44,12 +38,12 @@ namespace Projeto_de_formulário_para_um_bloco_de_notas
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void label1_Click_2(object sender, EventArgs e)
         {
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -59,38 +53,14 @@ namespace Projeto_de_formulário_para_um_bloco_de_notas
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
-            Close();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var Cliente = new Cliente
-            {
-                Nome = NOME_TXT.Text,
-                CPF = CPF_TXT.Text,
-                Telefone = TELEFONE_TXT.Text,
-                Email = EMAIL_TXT.Text,
-                Endereco = ENDEREÇO_TXT.Text,
-                CEP = CEP_TXT.Text,
-                Estado = ESTADO_TXT.Text
-            };  
-
-            try
-            {
-
-            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -98,19 +68,44 @@ namespace Projeto_de_formulário_para_um_bloco_de_notas
 
         }
 
-        private void TELEFONE_TXT_TextChanged(object sender, EventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void CPF_TXT_TextChanged(object sender, EventArgs e)
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void boxnome_txt_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsalvar_Click(object sender, EventArgs e)
+        {
+            var Cliente = new Cliente
+            {
+                Nome = boxnome_txt.Text,
+                CPF = boxcpf_txt.Text,
+                Email = boxemail_txt.Text,
+                Telefone = boxtelefone_txt.Text,
+                Endereco = boxendereco_txt.Text,
+                CEP = boxcep_txt.Text,
+                Estado = boxestado_txt.Text,
+                Cidade = boxcidade_txt.Text
+            };
+        }
+
+        private void btnfechar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
