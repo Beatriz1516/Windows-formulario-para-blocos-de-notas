@@ -90,7 +90,7 @@ namespace formulario_de_cadastro
 
         private void btnsalvar_Click(object sender, EventArgs e)
         {
-            var Cliente = new Cliente
+            Cliente cliente = new Cliente
             {
                 Nome = boxnome_txt.Text,
                 CPF = boxcpf_txt.Text,
@@ -101,6 +101,11 @@ namespace formulario_de_cadastro
                 Estado = boxestado_txt.Text,
                 Cidade = boxcidade_txt.Text
             };
+
+            string json = JsonSerializer.Serialize(cliente);
+
+            MessageBox.Show(json);
+            
         }
 
         private void btnfechar_Click(object sender, EventArgs e)
