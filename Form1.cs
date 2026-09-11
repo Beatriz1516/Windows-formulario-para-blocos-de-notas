@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.Json;
+using System.IO;
 
 namespace formulario_de_cadastro
 {
@@ -102,9 +103,20 @@ namespace formulario_de_cadastro
                 Cidade = boxcidade_txt.Text
             };
 
-            string json = JsonSerializer.Serialize(cliente);
+            JsonSerializerOptions opcoes = new JsonSerializerOptions()
+            {
+                WriteIndented = true
+            };
 
-            MessageBox.Show(json);
+            string json = JsonSerializer.Serialize(cliente, opcoes);
+            File.WriteAllText(caminhoArquivo, json);
+
+            MessageBox.Show(
+                $"Cliente salvo com sucesso!\n\nArquivo:\n{caminhoArquivo}",
+                $"Salvar cliente",
+                MessageBoxButtons.OK,
+                MessageBoxButtons.Informacao
+                );
             
         }
 
